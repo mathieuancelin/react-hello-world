@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Test with ES5 only</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <div id="app"></div>
@@ -26,7 +28,7 @@
           }
         });*/
 
-        // classes es5 style
+        // classes using es5 style
         function Geolocation(props) {
           React.Component.call(this, props);
         }
@@ -55,7 +57,7 @@
           render: function() {
             return (
               h('div', null,
-                h('h1', null,
+                h('h3', null,
                   this.state.location === null ? 'Loading location ...' : 'Your location is :'
                 ),
                 h(Geolocation, { location: this.state.location })

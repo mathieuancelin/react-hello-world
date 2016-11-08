@@ -3,34 +3,94 @@
   <head>
     <meta charset="utf-8">
     <title>React Hello World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
       .box-container {
         display: flex;
         flex-direction: column;
+        max-width: 800px;
+        margin: auto;
       }
       .box-row {
         flex: 1;
         display: flex;
         flex-direction: row;
       }
-      .box-row iframe {
+      .box-row .box-child {
         flex: 1;
+        height: 370px;
+        margin-bottom: 30px;
+        margin: 10px;
+      }
+      .box-centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      iframe {
+        outline: 1px solid lightgrey;
       }
     </style>
   </head>
   <body>
     <div class="box-container">
-      <div class="box-row">
-        <iframe src="./app-es5.html"></iframe>
+      <div class="box-centered">
+        <h1>Hello React</h1>
+        <div>
+          <p>
+            Here is some resources to use React from scratch without a module bundler, a transpiler, polyfills, etc ...
+          </p>
+          <p>
+            The following examples are just simple HTML files, like in the old days and only use features from your web browser
+          </p>
+        <div>
       </div>
       <div class="box-row">
-        <iframe src="./app-es5-jsx.html"></iframe>
+        <iframe frameborder="no" class="box-child" src="./app-es5.html"></iframe>
+        <div class="box-child box-centered">
+          <h3>ES5</h3>
+          <div>
+            <p>A simple React app using only ES5 and jQuery for HTTP calls</p>
+            <p>This version doesn't make use of JSX as it's not supported by web browsers</p>
+          </div>
+          <a target="_blank" class="waves-effect waves-light btn" href="https://github.com/mathieuancelin/react-hello-world/blob/master/app-es5.html"><i class="material-icons left">launch</i>SOURCES</a>
+        </div>
       </div>
       <div class="box-row">
-        <iframe src="./app-es6.html"></iframe>
+        <iframe frameborder="no" class="box-child" src="./app-es5-jsx.html"></iframe>
+        <div class="box-child box-centered">
+          <h3>ES5 + JSX</h3>
+          <div>
+            <p>A simple React app using only ES5 and jQuery for HTTP calls</p>
+            <p>This version makes use of JSX through JSXTransformer</p>
+          </div>
+          <a target="_blank" class="waves-effect waves-light btn" href="https://github.com/mathieuancelin/react-hello-world/blob/master/app-es5-jsx.html"><i class="material-icons left">launch</i>SOURCES</a>
+        </div>
       </div>
       <div class="box-row">
-        <iframe src="./app-es6-jsx.html"></iframe>
+        <iframe frameborder="no" class="box-child" src="./app-es6.html"></iframe>
+        <div class="box-child box-centered">
+          <h3>ES6</h3>
+          <div>
+            <p>A simple React app using ES6 features supported by your web browser</p>
+            <p>This version doesn't make use of JSX as it's not supported by web browsers</p>
+          </div>
+          <a target="_blank" class="waves-effect waves-light btn" href="https://github.com/mathieuancelin/react-hello-world/blob/master/app-es6.html"><i class="material-icons left">launch</i>SOURCES</a>
+        </div>
+      </div>
+      <div class="box-row">
+        <iframe frameborder="no" class="box-child" src="./app-es6-jsx.html"></iframe>
+        <div class="box-child box-centered">
+          <h3>ES6 + JSX</h3>
+          <div>
+            <p>A simple React app using ES6 features supported by your web browser</p>
+            <p>This version makes use of JSX through JSXTransformer</p>
+          </div>
+          <a target="_blank" class="waves-effect waves-light btn" href="https://github.com/mathieuancelin/react-hello-world/blob/master/app-es6-jsx.html"><i class="material-icons left">launch</i>SOURCES</a>
+        </div>
       </div>
     </div>
   </body>
